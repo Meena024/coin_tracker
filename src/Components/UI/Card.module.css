@@ -1,0 +1,21 @@
+:root {
+  --accent-color: #1725bf;
+}
+
+.card {
+  display: inline-block;
+  border: black 2px solid;
+  padding: 15px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.card button {
+  background-color: var(--accent-color);
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  font-weight: bolder;
+  font-family: "Courier New", Courier, monospace;
+  margin: 3%;
+}
