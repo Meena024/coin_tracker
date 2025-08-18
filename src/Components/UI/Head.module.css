@@ -1,0 +1,13 @@
+:root {
+  --base-color: rgb(253, 193, 81);
+  --contrast-color: black;
+}
+
+.head {
+  background-color: var(--contrast-color);
+  font-family: "Times New Roman", Times, serif;
+  padding: 20px;
+  padding-right: 50px;
+  text-align: right;
+  color: var(--base-color);
+}

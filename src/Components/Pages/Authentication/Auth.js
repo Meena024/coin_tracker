@@ -8,17 +8,7 @@ const Auth = () => {
   const [login, setLogin] = useState(true);
   return (
     <>
-      <div
-        style={{
-          fontFamily: "Courier New",
-          marginLeft: "3%",
-          marginBottom: "5%",
-        }}
-      >
-        <h1>Welcome to EXPENSE TRACKER!</h1>
-        <h2 style={{ marginLeft: "50px" }}>Track it, Know it, Own it.</h2>
-      </div>
-      <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center", margin: "15%" }}>
         <Card>
           {login && <Login />}
           {!login && <SignUp />}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-bootstrap";
+import form_classes from "../../UI/Form.module.css";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -20,7 +21,7 @@ const SignUp = () => {
   return (
     <>
       <h2>Sign Up</h2>
-      <Form onSubmit={signupHandler}>
+      <Form onSubmit={signupHandler} className={form_classes.form}>
         <div style={{ margin: "20px" }}>
           <input
             id="email"
@@ -63,7 +64,7 @@ const SignUp = () => {
 
         <div style={{ margin: "5px" }}>
           <button className="btn btn-primary" type="submit" disabled={loading}>
-            {loading ? "Logging in..." : "SIGN UP"}
+            {loading ? "Logging in..." : "Sign Up"}
           </button>
         </div>
       </Form>

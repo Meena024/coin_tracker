@@ -1,6 +1,7 @@
 import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import form_classes from "../../UI/Form.module.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -18,8 +19,8 @@ const Login = () => {
   };
   return (
     <>
-      <h2>Sign In</h2>
-      <Form onSubmit={loginHandler}>
+      <h1>Sign In</h1>
+      <Form onSubmit={loginHandler} className={form_classes.form}>
         <div style={{ margin: "20px" }}>
           <input
             id="email"
@@ -49,7 +50,7 @@ const Login = () => {
 
         <div style={{ margin: "5px" }}>
           <button className="btn btn-primary" type="submit" disabled={loading}>
-            {loading ? "Logging in..." : "SIGN IN"}
+            {loading ? "Logging in..." : "Sign In"}
           </button>
         </div>
       </Form>
