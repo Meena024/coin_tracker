@@ -37,7 +37,6 @@ const Login = () => {
           <input
             id="password"
             type="password"
-            className="form-control"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}

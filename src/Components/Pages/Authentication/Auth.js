@@ -22,7 +22,7 @@ const Auth = () => {
               )}
               {!login && (
                 <div>
-                  Having an Account?<div>SIGN IN</div>
+                  Already having an Account?<div>SIGN IN</div>
                 </div>
               )}
             </Link>
