@@ -1,6 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { auth } from "../Firebase/initialize";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail,
+} from "firebase/auth";
 
 const formatUser = (user) => ({
   uid: user.uid,
@@ -23,6 +27,33 @@ export const handleSignUp = createAsyncThunk(
       return formatUser(user);
     } catch (err) {
       return thunkAPI.rejectWithValue(err.message || "Signup failed");
+    }
+  }
+);
+
+export const handleLogin = createAsyncThunk(
+  "Auth/handleLogin",
+  async ({ email, password }, thunkAPI) => {
+    try {
+      const { user } = await signInWithEmailAndPassword(auth, email, password);
+      localStorage.setItem("uid", user.uid);
+      return formatUser(user);
+    } catch (err) {
+      return thunkAPI.rejectWithValue(err.message || "Login failed");
+    }
+  }
+);
+
+export const handleForgotPassword = createAsyncThunk(
+  "auth/forgotPassword",
+  async (email, thunkAPI) => {
+    try {
+      await sendPasswordResetEmail(auth, email);
+      return "Password reset email sent successfully.";
+    } catch (err) {
+      return thunkAPI.rejectWithValue(
+        err.message || "Failed to send reset email."
+      );
     }
   }
 );
