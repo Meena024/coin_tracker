@@ -4,6 +4,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   sendPasswordResetEmail,
+  signOut,
 } from "firebase/auth";
 
 const formatUser = (user) => ({
@@ -54,6 +55,18 @@ export const handleForgotPassword = createAsyncThunk(
       return thunkAPI.rejectWithValue(
         err.message || "Failed to send reset email."
       );
+    }
+  }
+);
+
+export const handleLogout = createAsyncThunk(
+  "Auth/handleLogout",
+  async (_, thunkAPI) => {
+    try {
+      await signOut(auth);
+      localStorage.removeItem("uid");
+    } catch (err) {
+      return thunkAPI.rejectWithValue(err.message || "Logout failed");
     }
   }
 );

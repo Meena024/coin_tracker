@@ -3,11 +3,29 @@
   --contrast-color: black;
 }
 
-.head {
+.header {
   background-color: var(--contrast-color);
   font-family: "Times New Roman", Times, serif;
   padding: 20px;
   padding-right: 50px;
   text-align: right;
   color: var(--base-color);
+}
+
+.head {
+  background-color: var(--base-color);
+  font-family: "Merriweather";
+  color: var(--contrast-color);
+}
+
+.head button {
+  background-color: var(--contrast-color);
+  border-radius: 15px;
+  color: var(--base-color);
+  border: 1px solid white;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bolder;
+  font-size: larger;
+  font-family: "Franklin Gothic Medium";
 }

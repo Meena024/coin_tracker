@@ -3,7 +3,7 @@ import logo from "../Assets/coin tracker.png";
 
 const Header = () => {
   return (
-    <div className={head_classes.head}>
+    <div className={head_classes.header}>
       <table style={{ width: "100%" }}>
         <tbody>
           <tr>

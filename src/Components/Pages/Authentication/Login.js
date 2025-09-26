@@ -30,7 +30,7 @@ const Login = (e) => {
       setLoading(true);
       const resultAction = await dispatch(handleLogin({ email, password }));
       setLoading(false);
-
+      console.log("login result:", resultAction);
       if (handleLogin.fulfilled.match(resultAction)) {
         navigate("/welcome");
       } else {
