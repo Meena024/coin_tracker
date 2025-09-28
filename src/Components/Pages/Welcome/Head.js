@@ -22,36 +22,37 @@ const Head = () => {
   };
 
   return (
-    <div className={head_classes.head}>
-      <Row className="py-2">
-        <Col xs={1} className="mx-3">
-          <img
-            src="https://media.istockphoto.com/id/629653980/photo/snowman.jpg?s=612x612&w=0&k=20&c=Mbsnibgwa0VuiwcJQLrzchvPqWnI9GIYVFdGPttx4eE="
-            alt="..."
-            height={60}
-            width={60}
-            className="rounded"
-          ></img>
-        </Col>
-        <Col xs={5}>
-          <h4>Hello,</h4>
-          <h6>When you track it, You control it.</h6>
-        </Col>
-        <Col className="pt-2">
-          {" "}
-          <button className="p-2">
+    <div className={head_classes.head_light}>
+      <div className={head_classes.head_content}>
+        <span className="d-flex justifyContent gap-5">
+          <span>
             <img
-              src={edit_icon}
-              alt="Edit Profile"
-              height={30}
-              data-toggle="modal"
+              src="https://media.istockphoto.com/id/629653980/photo/snowman.jpg?s=612x612&w=0&k=20&c=Mbsnibgwa0VuiwcJQLrzchvPqWnI9GIYVFdGPttx4eE="
+              alt="..."
+              height={60}
+              width={60}
+              className="rounded"
             />
-          </button>
-        </Col>
-        <Col className="d-flex justify-content-end me-3 p-2">
+          </span>
+          <span>
+            <h4>Hello,</h4>
+            <h6>When you track it, You control it.</h6>
+          </span>
+          <span>
+            <button className="p-2" onClick={() => alert("edit")}>
+              <img
+                src={edit_icon}
+                alt="Edit Profile"
+                height={30}
+                data-toggle="modal"
+              />
+            </button>
+          </span>
+        </span>
+        <span>
           <button onClick={logoutHandler}>Logout</button>
-        </Col>
-      </Row>
+        </span>
+      </div>
     </div>
   );
 };

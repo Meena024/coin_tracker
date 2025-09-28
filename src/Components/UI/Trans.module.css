@@ -1,0 +1,22 @@
+:root {
+  --cred-color: rgb(186, 230, 139);
+  --debit-color: rgb(249, 171, 133);
+}
+
+.trans_card_credit {
+  background-color: var(--cred-color);
+  border-radius: 15px;
+  padding: 15px 5%; /* top/bottom 15px, left/right 5% of container */
+  margin: 20px auto; /* center horizontally */
+  border: 1px solid black;
+  max-width: 600px; /* optional: keeps it from stretching too wide */
+}
+
+.trans_card_debit {
+  background-color: var(--debit-color);
+  border-radius: 15px;
+  padding: 15px 5%;
+  margin: 20px auto;
+  border: 1px solid black;
+  max-width: 600px;
+}
